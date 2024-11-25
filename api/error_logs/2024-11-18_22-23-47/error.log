@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus\request_decorator.py", line 112, in run_task
+    result = func(reqs, data)
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\Documents\Projects\my-botasaurus-project\src\scrape_heading_task.py", line 15, in scrape_heading_task
+    product_name = soup.find('title').get_text().strip()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_text'

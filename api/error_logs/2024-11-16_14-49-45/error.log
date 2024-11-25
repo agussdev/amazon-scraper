@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus\request_decorator.py", line 112, in run_task
+    result = func(reqs, data)
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\Documents\Projects\my-botasaurus-project\src\scrape_heading_task.py", line 9, in scrape_heading_task
+    response = request.get(data["link"])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\request_class.py", line 60, in get
+    return reqs.get(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\reqs.py", line 360, in get
+    return retry_on_network_error(lambda: _get(url, *args, **add_redirects(kwargs, True)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\reqs.py", line 348, in retry_on_network_error
+    raise e
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\reqs.py", line 341, in retry_on_network_error
+    return func()
+           ^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\reqs.py", line 360, in <lambda>
+    return retry_on_network_error(lambda: _get(url, *args, **add_redirects(kwargs, True)))
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\reqs.py", line 249, in request
+    req.send()
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\reqs.py", line 136, in send
+    raise e
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\reqs.py", line 133, in send
+    self.response = self.session.request(self.method, self.url, **merged_kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\session.py", line 192, in request
+    proc.send()
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\response.py", line 64, in send
+    self.response = self.execute_request()
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\response.py", line 76, in execute_request
+    raise e
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\response.py", line 69, in execute_request
+    resp = self.session.execute_request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\client.py", line 492, in execute_request
+    return self.build_response(url, headers, response_object, request_payload['proxyUrl'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\client.py", line 455, in build_response
+    return self.build_response_obj(url, headers, response_object['response'], proxy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Agustin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\botasaurus_requests\client.py", line 435, in build_response_obj
+    raise ClientException(response_object['body'])
+botasaurus_requests.exceptions.ClientException: net/http: request canceled (Client.Timeout or context cancellation while reading body)
